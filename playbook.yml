@@ -1,0 +1,8 @@
+- name: Demo playbook
+  hosts: all
+  become: yes
+  tasks: 
+    - name: create a line in a file
+      lineinfile:
+        path: /somefile
+        line: "{{ secret_line }}"
